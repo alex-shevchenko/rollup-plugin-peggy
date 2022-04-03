@@ -1,4 +1,4 @@
-import { generate } from 'pegjs';
+import { generate } from 'peggy';
 import { createFilter } from 'rollup-pluginutils';
 
 export default (options = {}) => ({
