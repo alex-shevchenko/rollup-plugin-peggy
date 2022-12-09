@@ -28,3 +28,11 @@ rollup({
   ]
 });
 ```
+
+You can also pass any of the documented [Peggy JavaScript API options][docs].
+
+[docs]: https://peggyjs.org/documentation.html#generating-a-parser-javascript-api
+
+```js
+peggy({ cache: true })
+```
