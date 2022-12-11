@@ -20,13 +20,12 @@ export default function (options: Options = {}): Plugin {
       const filter = createFilter(include, exclude);
       const exporter =
         target?.indexOf('es') === 0 ? 'export default' : 'module.exports =';
-      const generated = generate(grammar, {
-        output: 'source',
-        ...options
-      });
       return filter(id)
         ? {
-            code: `${exporter} ${generated};`,
+            code: `${exporter} ${generate(grammar, {
+              output: 'source',
+              ...options
+            })};`,
             map: { mappings: '' }
           }
         : null;
