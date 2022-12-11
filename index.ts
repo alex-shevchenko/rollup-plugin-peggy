@@ -13,7 +13,7 @@ export default function (options: Options = {}): Plugin {
     name: 'rollup-plugin-peggy',
     transform(grammar, id) {
       const {
-        target = 'es6',
+        target = 'es2015',
         include = ['*.pegjs', '**/*.pegjs'],
         exclude = []
       } = options;
