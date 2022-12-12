@@ -7,8 +7,8 @@ Released under the MIT license
 A [rollup](http://rollupjs.org) plugin allowing you to import [PEG.js](http://peggy.org) grammars as parsers directly in your code via Peggy, the PEG.js successor. This project is a fork of [rollup-plugin-pegjs](https://github.com/cameronhunter/rollup-plugin-pegjs), since PEG.js has been abandoned in favor of Peggy.
 
 ```js
-import { parse } from "grammar.pegjs";
-console.log(parse("language to parse"));
+import { parse } from 'grammar.pegjs';
+console.log(parse('language to parse'));
 ```
 
 ## Install
@@ -20,14 +20,13 @@ npm install --save-dev rollup-plugin-peggy
 ## Usage
 
 ```js
-import { rollup } from "rollup";
-import peggy from "rollup-plugin-peggy";
+// rollup.config.mjs
+import { rollup } from 'rollup';
+import peggy from 'rollup-plugin-peggy';
 
-rollup({
-  entry: "main.js",
-  plugins: [
-    peggy()
-  ]
+export default {
+  input: 'main.js',
+  plugins: [peggy()]
 });
 ```
 
@@ -36,5 +35,5 @@ You can also pass any of the documented [Peggy JavaScript API options][docs].
 [docs]: https://peggyjs.org/documentation.html#generating-a-parser-javascript-api
 
 ```js
-peggy({ cache: true })
+peggy({ cache: true });
 ```
