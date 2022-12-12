@@ -8,10 +8,7 @@
   "main": "index.es.js",
   "scripts": {
     "build": "rollup -c",
-    "pretest": "npm run build",
-    "test": "ava",
-    "preversion": "npm test",
-    "postversion": "git push --tags && git push"
+    "test": "vitest run"
   },
   "dependencies": {
     "@rollup/pluginutils": "^5.0.2",
@@ -21,11 +18,11 @@
     "@rollup/plugin-commonjs": "^23.0.4",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^10.0.1",
-    "ava": "^0.18.2",
     "babel-preset-es2015-rollup": "^3.0.0",
     "prettier": "^2.8.1",
     "rollup": "^3.7.2",
-    "tslib": "^2.4.1"
+    "tslib": "^2.4.1",
+    "vitest": "^0.25.7"
   },
   "peerDependencies": {
     "rollup": ">=2.0.0"
