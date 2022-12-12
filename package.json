@@ -4,8 +4,8 @@
   "description": "Import PEG.js grammars as parsers directly in your code via Peggy, the PEG.js successor",
   "author": "Caleb Evans",
   "license": "MIT",
-  "type": "module",
-  "main": "index.es.js",
+  "main": "index.cjs.js",
+  "module": "index.es.js",
   "scripts": {
     "build": "rollup -c",
     "prepare": "rollup -c",
