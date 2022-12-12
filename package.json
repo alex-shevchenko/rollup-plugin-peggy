@@ -8,6 +8,7 @@
   "main": "index.es.js",
   "scripts": {
     "build": "rollup -c",
+    "prepare": "rollup -c",
     "test": "vitest run"
   },
   "dependencies": {
