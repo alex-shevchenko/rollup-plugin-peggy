@@ -1,6 +1,8 @@
 # rollup-plugin-peggy
 
-[![Build Status](https://travis-ci.org/caleb531/rollup-plugin-peggy.svg?branch=master)](https://travis-ci.org/caleb531/rollup-plugin-peggy) [![NPM Version](https://img.shields.io/npm/v/rollup-plugin-peggy.svg)](https://npmjs.org/package/rollup-plugin-peggy) [![License](https://img.shields.io/npm/l/rollup-plugin-peggy.svg)](https://github.com/caleb531/rollup-plugin-peggy/blob/master/LICENSE.md)
+Copyright (c) 2016 Cameron Hunter  
+Copyright (c) 2022 Caleb Evans  
+Released under the MIT license
 
 A [rollup](http://rollupjs.org) plugin allowing you to import [PEG.js](http://peggy.org) grammars as parsers directly in your code via Peggy, the PEG.js successor. This project is a fork of [rollup-plugin-pegjs](https://github.com/cameronhunter/rollup-plugin-pegjs), since PEG.js has been abandoned in favor of Peggy.
 
