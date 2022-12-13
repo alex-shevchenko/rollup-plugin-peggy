@@ -8,12 +8,13 @@ test('should compile grammar into parser', async () => {
     plugins: [peggy()]
   });
 
+  const outputName = 'test_parser';
   const generated = await bundle.generate({
-    name: 'test_parser',
+    name: outputName,
     format: 'iife'
   });
   const { parse } = new Function(
-    `${generated.output[0].code}; return test_parser;`
+    `${generated.output[0].code}; return ${outputName};`
   )();
   const pass = parse('PASS?');
   const fail = parse('FAIL!');
