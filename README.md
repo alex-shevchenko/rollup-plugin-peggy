@@ -13,6 +13,9 @@ console.log(parse('language to parse'));
 
 ## Install
 
+This plugin is compatible with Rollup 2 and 3, as well as Vite 3 and 4. To use
+it with either, simply install it via the command below.
+
 ```sh
 npm install --save-dev rollup-plugin-peggy
 ```
