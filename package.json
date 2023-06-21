@@ -17,8 +17,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@rollup/pluginutils": "^5.0.2",
-    "peggy": "^1.2.0"
+    "@rollup/pluginutils": "^5.0.2"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^23.0.4",
@@ -31,7 +30,8 @@
     "vitest": "^0.25.7"
   },
   "peerDependencies": {
-    "rollup": ">=2.0.0"
+    "rollup": ">=2.0.0",
+    "peggy": ">=1.2.0"
   },
   "keywords": [
     "pegjs",
