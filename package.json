@@ -4,6 +4,11 @@
   "description": "Import PEG.js grammars as parsers directly in your code via Peggy, the PEG.js successor",
   "author": "Caleb Evans",
   "license": "MIT",
+  "homepage": "https://github.com/caleb531/rollup-plugin-peggy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caleb531/rollup-plugin-peggy.git"
+  },
   "main": "index.cjs.js",
   "module": "index.es.js",
   "scripts": {
