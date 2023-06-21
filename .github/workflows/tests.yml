@@ -17,6 +17,7 @@ jobs:
       fail-fast: false
       matrix:
         node-version: [16.x, 18.x, 19.x]
+        peggy-version: [1.x, 2.x, 3.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -35,6 +36,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Install Peggy ${{ matrix.peggy-version }}
+        run: pnpm add peggy@${{ matrix.peggy-version }}
 
       - name: Run tests
         run: pnpm test
