@@ -16,5 +16,9 @@ export default {
       format: 'cjs'
     }
   ],
+  // Since peggy is listed as a peer dependency for this plugin, it is crucial
+  // that we mark it as external, otherwise Rollup will compile into the output
+  // bundle whatever peggy version we have currently installed
+  external: ['peggy'],
   plugins: [commonjs(), nodeResolve(), typescript()]
 };
