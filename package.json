@@ -24,14 +24,15 @@
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^10.0.1",
     "babel-preset-es2015-rollup": "^3.0.0",
+    "peggy": "^3.0.2",
     "prettier": "^2.8.1",
     "rollup": "^3.7.2",
     "tslib": "^2.4.1",
     "vitest": "^0.25.7"
   },
   "peerDependencies": {
-    "rollup": ">=2.0.0",
-    "peggy": ">=1.2.0"
+    "peggy": ">=1.2.0",
+    "rollup": ">=2.0.0"
   },
   "keywords": [
     "pegjs",
