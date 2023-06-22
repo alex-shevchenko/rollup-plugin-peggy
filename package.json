@@ -9,8 +9,8 @@
     "type": "git",
     "url": "git+https://github.com/caleb531/rollup-plugin-peggy.git"
   },
-  "main": "index.cjs.js",
-  "module": "index.es.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
   "scripts": {
     "build": "rollup -c",
     "prepare": "rollup -c",

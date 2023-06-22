@@ -7,12 +7,12 @@ export default {
   output: [
     {
       exports: 'default',
-      file: 'index.es.js',
+      file: 'dist/index.es.js',
       format: 'es'
     },
     {
       exports: 'default',
-      file: 'index.cjs.js',
+      file: 'dist/index.cjs.js',
       format: 'cjs'
     }
   ],
