@@ -20,12 +20,14 @@ export default [
       {
         exports: 'default',
         file: 'dist/index.es.js',
-        format: 'es'
+        format: 'es',
+        sourcemap: true
       },
       {
         exports: 'default',
         file: 'dist/index.cjs.js',
-        format: 'cjs'
+        format: 'cjs',
+        sourcemap: true
       }
     ],
     // Since peggy is listed as a peer dependency for this plugin, it is crucial
