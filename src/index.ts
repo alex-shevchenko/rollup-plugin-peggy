@@ -2,7 +2,7 @@ import { createFilter } from '@rollup/pluginutils';
 import { generate, type ParserBuildOptions } from 'peggy';
 import type { Plugin } from 'rollup';
 
-interface Options extends ParserBuildOptions {
+export interface Options extends ParserBuildOptions {
   target?: string;
   include?: string[];
   exclude?: string[];

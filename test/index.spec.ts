@@ -1,6 +1,6 @@
 import { rollup } from 'rollup';
 import { expect, test } from 'vitest';
-import peggy from '..';
+import peggy from '../src';
 
 test('should compile grammar into parser', async () => {
   const bundle = await rollup({
