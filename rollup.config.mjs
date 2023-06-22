@@ -3,7 +3,7 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 
 export default {
-  input: 'index.ts',
+  input: 'src/index.ts',
   output: [
     {
       exports: 'default',
