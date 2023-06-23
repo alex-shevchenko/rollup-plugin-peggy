@@ -17,7 +17,7 @@ This plugin is compatible with Rollup 2 and 3, as well as Vite 3 and 4. To use
 it with either, simply install it via the command below.
 
 The `peggy` package is also required as a peer dependency. You may install any
-version as old as 1.2.0, through version 3.
+version as old as 1.2.0, through version 3.x.
 
 ```sh
 npm install --save-dev peggy
