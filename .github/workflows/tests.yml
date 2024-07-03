@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [16.x, 18.x, 19.x]
+        node-version: [18.x, 20.x]
         peggy-version: [1.x, 2.x, 3.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
