@@ -39,5 +39,10 @@
     "pegjs",
     "peggy",
     "rollup-plugin"
-  ]
+  ],
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
 }
