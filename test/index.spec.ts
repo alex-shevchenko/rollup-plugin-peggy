@@ -4,7 +4,7 @@ import peggy from '../src';
 
 test('should compile grammar into parser', async () => {
   const bundle = await rollup({
-    input: 'test/grammar.pegjs',
+    input: 'test/arithmetic.pegjs',
     plugins: [peggy()]
   });
 
@@ -16,9 +16,27 @@ test('should compile grammar into parser', async () => {
   const { parse } = new Function(
     `${generated.output[0].code}; return ${outputName};`
   )();
-  const pass = parse('PASS?');
-  const fail = parse('FAIL!');
+  expect(parse('1+2')).toEqual(3);
+  expect(() => parse('1+')).toThrow(
+    new SyntaxError('Expected "(" or simple number but end of input found.')
+  );
+});
 
-  expect(pass).toEqual({ pass: true });
-  expect(fail).toEqual({ pass: false });
+test('should accept standard Peggy options', async () => {
+  const bundle = await rollup({
+    input: 'test/arithmetic.pegjs',
+    plugins: [peggy({ cache: true })]
+  });
+
+  const outputName = 'test_parser';
+  const generated = await bundle.generate({
+    name: outputName,
+    format: 'iife'
+  });
+  const { parse } = new Function(
+    `${generated.output[0].code}; return ${outputName};`
+  )();
+  expect(() => parse('3*((((((1+2')).toThrow(
+    new SyntaxError('Expected ")", "*", or "+" but end of input found.')
+  );
 });
