@@ -42,5 +42,12 @@ You can also pass any of the documented [Peggy JavaScript API options][docs].
 [docs]: https://peggyjs.org/documentation.html#generating-a-parser-javascript-api
 
 ```js
-peggy({ cache: true });
+// rollup.config.mjs
+import { rollup } from 'rollup';
+import peggy from 'rollup-plugin-peggy';
+
+export default {
+  input: 'main.js',
+  plugins: [peggy({ cache: true })]
+});
 ```
