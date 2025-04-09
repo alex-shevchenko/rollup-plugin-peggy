@@ -13,7 +13,7 @@ console.log(parse('language to parse'));
 
 ## Install
 
-This plugin is compatible with Rollup 2 and 3, as well as Vite 3 and 4. To use
+This plugin is compatible with Rollup 2 and up, as well as Vite 3 and up. To use
 it with either, simply install it via the command below.
 
 The `peggy` package is also required as a peer dependency. You may install any
