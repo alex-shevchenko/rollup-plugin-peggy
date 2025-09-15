@@ -18,17 +18,18 @@ export default function (options: Options = {}): Plugin {
         exclude = []
       } = options;
       const filter = createFilter(include, exclude);
-      const exporter =
-        target?.indexOf('es') === 0 ? 'export default' : 'module.exports =';
-      return filter(id)
-        ? {
-            code: `${exporter} ${generate(grammar, {
-              output: 'source',
-              ...options
-            })};`,
-            map: { mappings: '' }
-          }
-        : null;
+      if (filter(id)) {
+        const code = generate(grammar, {
+          output: 'source',
+          ...options
+        }).toString();
+        return {
+          code: code,
+          map: { mappings: '' }
+        };
+      } else {
+        return null;
+      }
     }
   };
 }
